@@ -6,6 +6,7 @@
   z-index:999999;
   height:57px;
   left:100px;
+  cursor: crosshair;
   -webkit-animation-name:zombiemove,zombiewalk,mirror;
   -webkit-animation-duration:50s,1s,50s;
   -webkit-animation-timing-function:linear,steps(2,end),steps(1,end);
