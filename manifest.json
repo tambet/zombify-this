@@ -18,5 +18,8 @@
     "default_title": "Zombify this",
     "default_icon": "icon-19.png"
   },
+  "web_accessible_resources": [
+    "zombiewalk.png"
+  ],
   "manifest_version": 2
 }

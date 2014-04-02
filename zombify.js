@@ -11,6 +11,14 @@ function create() {
 	addZombie();
 }
 
+function showText(message) {
+  var textOverlay = document.createElement('div');
+  textOverlay.innerText = message;
+  textOverlay.setAttribute('id', 'overlay');
+  textOverlay.classList.add('bounceIn');
+  document.body.appendChild(textOverlay);
+}
+
 function gameOver() {
 	end = true;
 	alert("GAME OVER! YOU KILLED " + score + " ZOMBIES BEFORE BECOMING ZOMBIEFOOD!");
@@ -25,7 +33,11 @@ function addScore() {
 	zombiesToCreate++;
 	zombieCount--;
 	score++;
-  chrome.extension.sendMessage({counter: score});
+  chrome.extension.sendMessage({score: score}, function (response) {
+    if (response.message) {
+      showText(response.message);
+    }
+  });
 }
 
 function addZombie() {
