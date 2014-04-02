@@ -1,11 +1,11 @@
-#zombie {
+.zombie-0 {
   background:url(http://zombierun.eu/wp-content/themes/zombierun/css/images/zombiewalk.png);
   position:fixed;
   bottom:10px;
   width:63px;
   z-index:999999;
   height:57px;
-  left:100px;
+  left:0%;
   cursor: crosshair;
   -webkit-animation-name:zombiemove,zombiewalk,mirror;
   -webkit-animation-duration:50s,1s,50s;
@@ -16,3 +16,34 @@
 @-webkit-keyframes zombiewalk{from{background-position:0 0}to{background-position:-126px 0}}
 @-webkit-keyframes zombiemove{0%{left:0%}50%{left:95%}100%{left:0%}}
 @-webkit-keyframes mirror{0%{-webkit-transform:scaleX(1)}50%{-webkit-transform:scaleX(-1)}100%{-webkit-transform:scaleX(1)}}
+
+.zombie-1 {
+  background:url(http://zombierun.eu/wp-content/themes/zombierun/css/images/zombiewalk.png);
+  position:fixed;
+  bottom:10px;
+  width:63px;
+  z-index:999999;
+  height:57px;
+  left:95%;
+  cursor: crosshair;
+  -webkit-animation-name:zombiemove-two,zombiewalk,mirror-two;
+  -webkit-animation-duration:50s,1s,50s;
+  -webkit-animation-timing-function:linear,steps(2,end),steps(1,end);
+  -webkit-animation-iteration-count:infinite,infinite,infinite;
+  -webkit-animation-direction:normal,normal,normal;
+}
+@-webkit-keyframes zombiemove-two{0%{left:95%}50%{left:0%}100%{left:95%}}
+@-webkit-keyframes mirror-two{0%{-webkit-transform:scaleX(-1)}50%{-webkit-transform:scaleX(1)}100%{-webkit-transform:scaleX(-1)}}
+
+#scoreboard {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+  padding: 10px 20px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(128,128,128,.4);
+}
