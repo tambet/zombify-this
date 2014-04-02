@@ -1,5 +1,5 @@
 .zombie-0 {
-  background:url(chrome-extension://khnkaaopgeofadaelnadcibdpppalpli/zombiewalk.png);
+  background:url(chrome-extension://__MSG_@@extension_id__/zombiewalk.png);
   position:fixed;
   bottom:10px;
   width:63px;
@@ -18,7 +18,7 @@
 @-webkit-keyframes mirror{0%{-webkit-transform:scaleX(1)}50%{-webkit-transform:scaleX(-1)}100%{-webkit-transform:scaleX(1)}}
 
 .zombie-1 {
-  background:url(chrome-extension://khnkaaopgeofadaelnadcibdpppalpli/zombiewalk.png);
+  background:url(chrome-extension://__MSG_@@extension_id__/zombiewalk.png);
   position:fixed;
   bottom:10px;
   width:63px;
