@@ -2,7 +2,7 @@
   "name": "Zombify this",
   "short_name": "Zombify the current page",
   "description": "Zombify the current page",
-  "version": "1.3",
+  "version": "1.4",
   "permissions": [
     "activeTab"
   ],
