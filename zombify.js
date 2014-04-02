@@ -1,7 +1,6 @@
 var zombieCount = 0;
 var zombiesToCreate = 0;
 var score = 0;
-var scoreDiv;
 var end = false;
 var zombiesHolderDiv;
 
@@ -9,14 +8,12 @@ function create() {
 	zombiesHolderDiv = document.createElement('div');
 	zombiesHolderDiv.setAttribute('id', 'zombies');
 	document.body.appendChild(zombiesHolderDiv);
-	addScoreBoard();
 	addZombie();
 }
 
 function gameOver() {
 	end = true;
 	alert("GAME OVER! YOU KILLED " + score + " ZOMBIES BEFORE BECOMING ZOMBIEFOOD!");
-	scoreDiv.parentNode.removeChild(scoreDiv);
 	zombiesHolderDiv.parentNode.removeChild(zombiesHolderDiv);
 }
 
@@ -28,14 +25,7 @@ function addScore() {
 	zombiesToCreate++;
 	zombieCount--;
 	score++;
-	scoreDiv.innerHTML = "ZOMBIES KILLED: " + score;
-}
-
-function addScoreBoard() {
-	scoreDiv = document.createElement('div');
-	scoreDiv.setAttribute('id', 'scoreboard');
-	scoreDiv.innerHTML = "ZOMBIES KILLED: 0";
-	document.body.appendChild(scoreDiv);
+  chrome.extension.sendMessage({counter: score});
 }
 
 function addZombie() {
