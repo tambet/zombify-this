@@ -43,6 +43,7 @@
   color: #000;
   font-weight: 600;
   opacity: 0;
+  z-index: 99999;
 }
 
 @-webkit-keyframes bounceIn {
